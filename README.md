@@ -1,11 +1,15 @@
-# Provenir Environments Mockup
+# Provenir Dashboard Mockup
 
-Static HTML/CSS/JS prototype that recreates the provided environments dashboard screenshot.
+Static HTML/CSS/JS prototype that recreates the provided dashboard style and packages it as a small multi-page sidebar navigation demo.
 
 ## Files
 
 ```text
 .
+├─ applications.html
+├─ integrations.html
+├─ alerts.html
+├─ workspaces.html
 ├─ index.html
 ├─ style.css
 └─ assets/
@@ -17,13 +21,13 @@ Static HTML/CSS/JS prototype that recreates the provided environments dashboard 
 
 ## Run
 
-Open `index.html` directly in a browser.
+Open `index.html` directly in a browser. The sidebar links navigate to the other static HTML pages.
 
 ## Notes
 
 - Fonts are local under `assets/fonts/`.
 - The reusable icon source sprite lives in `assets/icons/sprite.svg`.
-- The page keeps an inline runtime sprite in `index.html` so icons work correctly when opened via `file://`.
+- Each page keeps an inline runtime sprite so icons work correctly when opened via `file://`.
 - Card selection behavior is in `assets/js/main.js`.
 
 ## Extend

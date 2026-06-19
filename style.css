@@ -202,16 +202,52 @@ button {
 }
 
 .sidebar__action {
+  position: relative;
   width: 28px;
   height: 28px;
   border-radius: 9px;
-  color: #fff;
-  background: linear-gradient(180deg, #7776b4, #66669f);
-  box-shadow: 0 8px 14px rgba(102, 102, 159, 0.25);
+  color: #79809a;
+  background: linear-gradient(180deg, #ffffff, #f4f7fb);
+  border: 1px solid rgba(120, 127, 160, 0.16);
+  box-shadow: 0 6px 12px rgba(125, 136, 164, 0.12);
+  text-decoration: none;
+  transition:
+    transform 160ms ease,
+    background-color 160ms ease,
+    box-shadow 160ms ease,
+    color 160ms ease,
+    border-color 160ms ease;
 }
 
-.sidebar__action:not(.sidebar__action--active) {
-  opacity: 0.9;
+.sidebar__action::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -8px;
+  width: 3px;
+  height: 18px;
+  border-radius: 999px;
+  background: transparent;
+  transform: translateY(-50%) scaleY(0.55);
+  opacity: 0;
+  transition: transform 160ms ease, opacity 160ms ease, background-color 160ms ease;
+}
+
+.sidebar__action--active,
+.sidebar__action[aria-current="page"] {
+  color: #fff;
+  background: linear-gradient(180deg, #7d7cc0, #5f629d);
+  border-color: rgba(94, 98, 157, 0.4);
+  box-shadow:
+    0 10px 18px rgba(92, 98, 156, 0.28),
+    0 0 0 3px rgba(121, 126, 188, 0.12);
+}
+
+.sidebar__action--active::before,
+.sidebar__action[aria-current="page"]::before {
+  opacity: 1;
+  background: linear-gradient(180deg, #817fe0, #5d60a8);
+  transform: translateY(-50%) scaleY(1);
 }
 
 .sidebar__ghost {
@@ -378,6 +414,21 @@ button {
 .import-button:focus-visible {
   background: rgba(116, 117, 168, 0.1);
   color: var(--brand-deep);
+}
+
+.sidebar__action:hover,
+.sidebar__action:focus-visible {
+  transform: translateX(1px);
+  border-color: rgba(110, 116, 174, 0.28);
+  box-shadow: 0 10px 16px rgba(110, 116, 174, 0.16);
+}
+
+.sidebar__action--active:hover,
+.sidebar__action--active:focus-visible,
+.sidebar__action[aria-current="page"]:hover,
+.sidebar__action[aria-current="page"]:focus-visible {
+  background: linear-gradient(180deg, #7d7cc0, #5f629d);
+  color: #fff;
 }
 
 .import-button:hover,
