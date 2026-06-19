@@ -334,6 +334,23 @@ button {
   outline: none;
 }
 
+.environment-card--navigable {
+  cursor: pointer;
+}
+
+.environment-card__stretched-link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+}
+
+.environment-card__menu,
+.environment-card__meta {
+  position: relative;
+  z-index: 2;
+}
+
 .environment-card:hover,
 .environment-card:focus-visible {
   transform: translateY(-3px);

@@ -6,7 +6,7 @@ const setActiveCard = (card) => {
 
 cards.forEach((card) => {
   card.addEventListener('click', (event) => {
-    if (event.target.closest('button')) {
+    if (event.target.closest('button, a')) {
       return;
     }
 
