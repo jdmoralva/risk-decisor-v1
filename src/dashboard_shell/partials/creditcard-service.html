@@ -1,0 +1,30 @@
+      <section class="service-workbench" aria-label="CreditCard service workbench">
+        <div class="service-canvas">
+          <section class="service-sidebar-panel" aria-label="Object tree">
+            <div class="service-sidebar-panel__header">
+              <label class="service-search" aria-label="Search objects">
+                <input type="text" value="" aria-label="Search">
+                <svg><use href="#icon-search"></use></svg>
+              </label>
+            </div>
+
+            <div class="service-sidebar-panel__header">
+              <div class="service-sidebar-icons">
+                <button class="service-sidebar-icon" type="button" aria-label="Add object"><svg><use href="#icon-plus"></use></svg></button>
+                <button class="service-sidebar-icon" type="button" aria-label="Grid view"><svg><use href="#icon-grid"></use></svg></button>
+                <button class="service-sidebar-icon" type="button" aria-label="Branch view"><svg><use href="#icon-branch"></use></svg></button>
+              </div>
+            </div>
+
+            <div class="service-tree">
+{{TREE_MENU}}
+            </div>
+          </section>
+
+          <section class="service-main-panel" aria-label="Design canvas">
+            <div class="service-main-panel__hint">
+              <p>There is currently no business logic open now. You can create a new business logic window or open one from the object tree.</p>
+            </div>
+          </section>
+        </div>
+      </section>

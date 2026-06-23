@@ -1,0 +1,172 @@
+{
+  "environments": [
+    {
+      "title": "Imported",
+      "menuLabel": "Imported environment options",
+      "badgeIcon": "icon-cube",
+      "selected": true,
+      "href": "services.html",
+      "linkLabel": "Open Imported services",
+      "metaAria": "Imported environment details",
+      "meta": [
+        { "label": "Connections", "icon": "icon-branch" },
+        { "label": "Checklist", "icon": "icon-grid" },
+        { "label": "Warnings", "icon": "icon-alert" },
+        { "label": "Deployments", "icon": "icon-briefcase" }
+      ]
+    },
+    {
+      "title": "SANDBOX",
+      "menuLabel": "Sandbox environment options",
+      "badgeIcon": "icon-cube",
+      "metaAria": "Sandbox environment details",
+      "meta": [
+        { "label": "Connections", "icon": "icon-branch" },
+        { "label": "Checklist", "icon": "icon-grid" },
+        { "label": "Validation", "icon": "icon-flask" },
+        { "label": "Deployments", "icon": "icon-briefcase" }
+      ]
+    },
+    {
+      "title": "PRODUCTION",
+      "menuLabel": "Production environment options",
+      "badgeIcon": "icon-cube",
+      "metaAria": "Production environment details",
+      "meta": [
+        { "label": "Connections", "icon": "icon-branch" },
+        { "label": "Checklist", "icon": "icon-grid" },
+        { "label": "Security", "icon": "icon-lock" },
+        { "label": "Deployments", "icon": "icon-briefcase" }
+      ]
+    }
+  ],
+  "applications": [
+    {
+      "title": "Origination",
+      "menuLabel": "Origination app options",
+      "badgeIcon": "icon-grid",
+      "selected": true,
+      "metaAria": "Origination application details",
+      "meta": [
+        { "label": "Modules", "icon": "icon-grid" },
+        { "label": "Links", "icon": "icon-branch" },
+        { "label": "Warnings", "icon": "icon-alert" },
+        { "label": "Workspaces", "icon": "icon-briefcase" }
+      ]
+    },
+    {
+      "title": "Decisioning",
+      "menuLabel": "Decisioning app options",
+      "badgeIcon": "icon-grid",
+      "metaAria": "Decisioning application details",
+      "meta": [
+        { "label": "Modules", "icon": "icon-grid" },
+        { "label": "Links", "icon": "icon-branch" },
+        { "label": "Warnings", "icon": "icon-alert" },
+        { "label": "Workspaces", "icon": "icon-briefcase" }
+      ]
+    },
+    {
+      "title": "Fraud",
+      "menuLabel": "Fraud app options",
+      "badgeIcon": "icon-grid",
+      "metaAria": "Fraud application details",
+      "meta": [
+        { "label": "Modules", "icon": "icon-grid" },
+        { "label": "Links", "icon": "icon-branch" },
+        { "label": "Warnings", "icon": "icon-alert" },
+        { "label": "Workspaces", "icon": "icon-briefcase" }
+      ]
+    }
+  ],
+  "alerts": [
+    {
+      "title": "Fraud Spike",
+      "menuLabel": "Fraud spike alert options",
+      "badgeIcon": "icon-alert",
+      "selected": true,
+      "metaAria": "Fraud spike alert details",
+      "meta": [
+        { "label": "Rules", "icon": "icon-grid" },
+        { "label": "Escalations", "icon": "icon-branch" },
+        { "label": "Severity", "icon": "icon-alert" },
+        { "label": "Owners", "icon": "icon-briefcase" }
+      ]
+    },
+    {
+      "title": "Latency",
+      "menuLabel": "Latency threshold alert options",
+      "badgeIcon": "icon-alert",
+      "metaAria": "Latency alert details",
+      "meta": [
+        { "label": "Rules", "icon": "icon-grid" },
+        { "label": "Escalations", "icon": "icon-branch" },
+        { "label": "Severity", "icon": "icon-alert" },
+        { "label": "Owners", "icon": "icon-briefcase" }
+      ]
+    },
+    {
+      "title": "KYC Watch",
+      "menuLabel": "KYC watch alert options",
+      "badgeIcon": "icon-alert",
+      "metaAria": "KYC watch alert details",
+      "meta": [
+        { "label": "Rules", "icon": "icon-grid" },
+        { "label": "Escalations", "icon": "icon-branch" },
+        { "label": "Severity", "icon": "icon-alert" },
+        { "label": "Owners", "icon": "icon-briefcase" }
+      ]
+    }
+  ],
+  "workspaces": [
+    {
+      "title": "North America",
+      "menuLabel": "North America workspace options",
+      "badgeIcon": "icon-briefcase",
+      "selected": true,
+      "metaAria": "North America workspace details",
+      "meta": [
+        { "label": "Applications", "icon": "icon-grid" },
+        { "label": "Links", "icon": "icon-branch" },
+        { "label": "Alerts", "icon": "icon-alert" },
+        { "label": "Workspaces", "icon": "icon-briefcase" }
+      ]
+    },
+    {
+      "title": "LATAM",
+      "menuLabel": "LATAM workspace options",
+      "badgeIcon": "icon-briefcase",
+      "metaAria": "LATAM workspace details",
+      "meta": [
+        { "label": "Applications", "icon": "icon-grid" },
+        { "label": "Links", "icon": "icon-branch" },
+        { "label": "Alerts", "icon": "icon-alert" },
+        { "label": "Workspaces", "icon": "icon-briefcase" }
+      ]
+    },
+    {
+      "title": "EMEA",
+      "menuLabel": "EMEA workspace options",
+      "badgeIcon": "icon-briefcase",
+      "metaAria": "EMEA workspace details",
+      "meta": [
+        { "label": "Applications", "icon": "icon-grid" },
+        { "label": "Links", "icon": "icon-branch" },
+        { "label": "Alerts", "icon": "icon-alert" },
+        { "label": "Workspaces", "icon": "icon-briefcase" }
+      ]
+    }
+  ],
+  "services": [
+    { "title": "BureauTestHarness", "deleteLabel": "Delete BureauTestHarness", "moreLabel": "More BureauTestHarness options" },
+    { "title": "CreditCard", "deleteLabel": "Delete CreditCard", "moreLabel": "More CreditCard options", "href": "creditcard-service.html", "linkLabel": "Open CreditCard service" },
+    { "title": "DataModel", "deleteLabel": "Delete DataModel", "moreLabel": "More DataModel options" },
+    { "title": "Decisionintelligence", "deleteLabel": "Delete Decisionintelligence", "moreLabel": "More Decisionintelligence options" },
+    { "title": "LoanOriginationDate", "deleteLabel": "Delete LoanOriginationDate", "moreLabel": "More LoanOriginationDate options" },
+    { "title": "Models", "deleteLabel": "Delete Models", "moreLabel": "More Models options" },
+    { "title": "serv12", "deleteLabel": "Delete serv12", "moreLabel": "More serv12 options" },
+    { "title": "TestDEConfig", "deleteLabel": "Delete TestDEConfig", "moreLabel": "More TestDEConfig options" },
+    { "title": "testreles", "deleteLabel": "Delete testreles", "moreLabel": "More testreles options" },
+    { "title": "testserv29novDE", "deleteLabel": "Delete testserv29novDE", "moreLabel": "More testserv29novDE options" }
+  ]
+}

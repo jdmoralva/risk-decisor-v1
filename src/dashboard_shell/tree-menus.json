@@ -1,0 +1,46 @@
+{
+  "creditcardObjects": {
+    "ariaLabel": "Service objects",
+    "items": [
+      {
+        "label": "Business Logic",
+        "icon": "icon-branch",
+        "kind": "top",
+        "toggle": {
+          "expanded": true,
+          "controls": "business-logic-submenu",
+          "label": "Business Logic submenu"
+        },
+        "more": true,
+        "children": [
+          { "label": "Chrome...", "kind": "submenu" },
+          { "label": "HealthCheck", "kind": "submenu" },
+          { "label": "Mpose", "kind": "submenu" },
+          { "label": "Processor", "kind": "submenu" },
+          { "label": "Bills", "kind": "submenu" },
+          { "label": "Scripts", "kind": "submenu" },
+          { "label": "Utility", "kind": "submenu" },
+          {
+            "label": "Workflows",
+            "kind": "submenu",
+            "toggle": {
+              "expanded": false,
+              "controls": "workflows-submenu",
+              "label": "Workflows submenu"
+            },
+            "children": [
+              { "label": "Decision", "kind": "submenu" },
+              { "label": "MainDecision", "kind": "submenu" },
+              { "label": "UpdateDecision", "kind": "submenu" }
+            ]
+          }
+        ]
+      },
+      { "label": "Connections", "icon": "icon-branch" },
+      { "label": "Data Models", "icon": "icon-grid" },
+      { "label": "Document Templates", "icon": "icon-grid" },
+      { "label": "Events", "icon": "icon-alert" },
+      { "label": "Windows", "checked": true, "selected": true }
+    ]
+  }
+}

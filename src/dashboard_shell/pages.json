@@ -1,0 +1,111 @@
+[
+  {
+    "output": "index.html",
+    "title": "Provenir Environments Mockup",
+    "bodyClass": "",
+    "styles": ["style.css"],
+    "scripts": ["assets/js/controllers/card-selection-controller.js", "assets/js/pages/card-grid-page.js"],
+    "activeNav": "integrations",
+    "entityCards": { "variant": "environment", "collection": "environments" },
+    "headerAddon": null,
+    "breadcrumbs": [
+      { "type": "home", "href": "index.html" },
+      { "type": "current", "label": "Environments" }
+    ],
+    "mainPartial": "environments.html"
+  },
+  {
+    "output": "integrations.html",
+    "title": "Provenir Integrations Mockup",
+    "bodyClass": "",
+    "styles": ["style.css"],
+    "scripts": ["assets/js/controllers/card-selection-controller.js", "assets/js/pages/card-grid-page.js"],
+    "activeNav": "integrations",
+    "entityCards": { "variant": "environment", "collection": "environments" },
+    "headerAddon": null,
+    "breadcrumbs": [
+      { "type": "home", "href": "integrations.html" },
+      { "type": "current", "label": "Environments" }
+    ],
+    "mainPartial": "environments.html"
+  },
+  {
+    "output": "applications.html",
+    "title": "Provenir Applications Mockup",
+    "bodyClass": "",
+    "styles": ["style.css"],
+    "scripts": ["assets/js/controllers/card-selection-controller.js", "assets/js/pages/card-grid-page.js"],
+    "activeNav": "applications",
+    "entityCards": { "variant": "environment", "collection": "applications" },
+    "headerAddon": null,
+    "breadcrumbs": [
+      { "type": "home", "href": "applications.html" },
+      { "type": "current", "label": "Applications" }
+    ],
+    "mainPartial": "applications.html"
+  },
+  {
+    "output": "alerts.html",
+    "title": "Provenir Alerts Mockup",
+    "bodyClass": "",
+    "styles": ["style.css"],
+    "scripts": ["assets/js/controllers/card-selection-controller.js", "assets/js/pages/card-grid-page.js"],
+    "activeNav": "alerts",
+    "entityCards": { "variant": "environment", "collection": "alerts" },
+    "headerAddon": null,
+    "breadcrumbs": [
+      { "type": "home", "href": "alerts.html" },
+      { "type": "current", "label": "Alerts" }
+    ],
+    "mainPartial": "alerts.html"
+  },
+  {
+    "output": "workspaces.html",
+    "title": "Provenir Workspaces Mockup",
+    "bodyClass": "",
+    "styles": ["style.css"],
+    "scripts": ["assets/js/controllers/card-selection-controller.js", "assets/js/pages/card-grid-page.js"],
+    "activeNav": "workspaces",
+    "entityCards": { "variant": "environment", "collection": "workspaces" },
+    "headerAddon": null,
+    "breadcrumbs": [
+      { "type": "home", "href": "workspaces.html" },
+      { "type": "current", "label": "Workspaces" }
+    ],
+    "mainPartial": "workspaces.html"
+  },
+  {
+    "output": "services.html",
+    "title": "Provenir Services Mockup",
+    "bodyClass": "services-page",
+    "styles": ["style.css"],
+    "scripts": [],
+    "activeNav": "integrations",
+    "entityCards": { "variant": "service", "collection": "services" },
+    "headerAddon": "servicesToolbar",
+    "breadcrumbs": [
+      { "type": "home", "href": "integrations.html" },
+      { "type": "link", "href": "integrations.html", "label": "Imported" },
+      { "type": "current", "label": "Services" }
+    ],
+    "mainPartial": "services.html"
+  },
+  {
+    "output": "creditcard-service.html",
+    "title": "Provenir CreditCard Service Mockup",
+    "bodyClass": "creditcard-page",
+    "styles": ["style.css"],
+    "scripts": ["assets/js/controllers/tree-toggle-controller.js", "assets/js/pages/creditcard-service-page.js"],
+    "activeNav": "integrations",
+    "entityCards": null,
+    "treeMenu": "creditcardObjects",
+    "headerAddon": "creditcardStagebar",
+    "breadcrumbs": [
+      { "type": "home", "href": "integrations.html" },
+      { "type": "link", "href": "integrations.html", "label": "Imported" },
+      { "type": "link", "href": "services.html", "label": "Services" },
+      { "type": "current", "label": "CreditCard" }
+    ],
+    "mainPartial": "creditcard-service.html"
+  }
+]
