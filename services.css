@@ -86,6 +86,17 @@ body.services-page .content {
   text-align: center;
 }
 
+.service-card--navigable {
+  cursor: pointer;
+}
+
+.service-card__stretched-link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+}
+
 .service-card__pin {
   position: absolute;
   top: 14px;
@@ -104,6 +115,7 @@ body.services-page .content {
   display: flex;
   align-items: center;
   gap: 8px;
+  z-index: 2;
 }
 
 .service-card__icon {
