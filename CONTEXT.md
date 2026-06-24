@@ -20,6 +20,12 @@ Generated module that renders nested object-tree options and submenus for workbe
 ### HeaderAddon
 Generated module that renders header variations such as stage bars and services action toolbars from data instead of bespoke partial markup.
 
+### PartialRenderer
+Build-time module that reads parameterized `.html` partials from `src/dashboard_shell/partials/`, replaces `{{KEY}}` placeholders with context values, and returns the rendered string. One seam — `render_partial(name, context)` — replaces four Python modules that previously built HTML in f-string literals.
+
+### EntityCardPartial
+Parameterized partial variant of EntityCard: `environment-card.html` and `service-card.html` accept `{{TITLE}}`, `{{CLASSES}}`, `{{STRETCHED_LINK}}`, and variant-specific placeholders instead of embedding card markup in Python f-strings.
+
 ### CardGridPage
 Page-type module for screens composed of a hero section and an EntityCard grid.
 

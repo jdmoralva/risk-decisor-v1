@@ -1,3 +1,6 @@
+from scripts.dashboard_shell_build.context import render_partial
+
+
 def render_environment_entity_card(item: dict) -> str:
     classes = ["environment-card"]
     if item.get("selected"):
@@ -8,7 +11,7 @@ def render_environment_entity_card(item: dict) -> str:
     stretched_link = ""
     if item.get("href"):
         stretched_link = (
-            f'          <a class="environment-card__stretched-link" href="{item["href"]}" aria-label="{item["linkLabel"]}"></a>\n'
+            f'\n          <a class="environment-card__stretched-link" href="{item["href"]}" aria-label="{item["linkLabel"]}"></a>'
         )
 
     meta_buttons = "\n".join(
@@ -16,18 +19,15 @@ def render_environment_entity_card(item: dict) -> str:
         for meta in item["meta"]
     )
 
-    return (
-        f'        <article class="{" ".join(classes)}" tabindex="0" data-card>\n'
-        f'{stretched_link}'
-        f'          <button class="environment-card__menu" type="button" aria-label="{item["menuLabel"]}"><svg><use href="#icon-ellipsis"></use></svg></button>\n'
-        f'          <div class="environment-card__badge" aria-hidden="true"><svg><use href="#{item["badgeIcon"]}"></use></svg></div>\n'
-        f'          <h2>{item["title"]}</h2>\n'
-        f'          <div class="environment-card__rule"></div>\n'
-        f'          <div class="environment-card__meta" aria-label="{item["metaAria"]}">\n'
-        f'{meta_buttons}\n'
-        f'          </div>\n'
-        f'        </article>'
-    )
+    return render_partial("environment-card.html", {
+        "CLASSES": " ".join(classes),
+        "STRETCHED_LINK": stretched_link,
+        "MENU_LABEL": item["menuLabel"],
+        "BADGE_ICON": item["badgeIcon"],
+        "TITLE": item["title"],
+        "META_ARIA": item["metaAria"],
+        "META_BUTTONS": meta_buttons,
+    })
 
 
 def render_service_entity_card(item: dict) -> str:
@@ -38,17 +38,16 @@ def render_service_entity_card(item: dict) -> str:
     stretched_link = ""
     if item.get("href"):
         stretched_link = (
-            f'          <a class="service-card__stretched-link" href="{item["href"]}" aria-label="{item["linkLabel"]}"></a>\n'
+            f'\n          <a class="service-card__stretched-link" href="{item["href"]}" aria-label="{item["linkLabel"]}"></a>'
         )
 
-    return (
-        f'        <article class="{" ".join(classes)}">\n'
-        f'{stretched_link}'
-        f'          <span class="service-card__pin" aria-hidden="true"></span>\n'
-        f'          <div class="service-card__actions"><button class="service-card__action" type="button" aria-label="{item["deleteLabel"]}"><svg><use href="#icon-trash"></use></svg></button><button class="service-card__action" type="button" aria-label="{item["moreLabel"]}"><svg><use href="#icon-ellipsis"></use></svg></button></div>\n'
-        f'          <div class="service-card__icon"><svg><use href="#icon-cube"></use></svg></div><h2>{item["title"]}</h2>\n'
-        f'        </article>'
-    )
+    return render_partial("service-card.html", {
+        "CLASSES": " ".join(classes),
+        "STRETCHED_LINK": stretched_link,
+        "DELETE_LABEL": item["deleteLabel"],
+        "MORE_LABEL": item["moreLabel"],
+        "TITLE": item["title"],
+    })
 
 
 def build_entity_cards(spec: dict | None, entity_cards: dict) -> str:

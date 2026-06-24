@@ -1,3 +1,6 @@
+from scripts.dashboard_shell_build.context import render_partial
+
+
 def render_tree_option(item: dict) -> str:
     classes = ["service-tree__option"]
     if item.get("kind") == "top":
@@ -33,14 +36,14 @@ def render_tree_option(item: dict) -> str:
     if item.get("more"):
         more_markup = '<span class="service-tree__more" aria-hidden="true"><svg><use href="#icon-ellipsis"></use></svg></span>'
 
-    option_html = (
-        f'                  <button class="{" ".join(classes)}" type="button"{toggle_attrs}>'
-        f'<span class="{caret_classes}" aria-hidden="true"></span>'
-        f'{second_node}'
-        f'<span class="service-tree__label">{item["label"]}</span>'
-        f'{more_markup}'
-        f'</button>'
-    )
+    option_html = render_partial("tree-option.html", {
+        "CLASSES": " ".join(classes),
+        "TOGGLE_ATTRS": toggle_attrs,
+        "CARET_CLASSES": caret_classes,
+        "SECOND_NODE": second_node,
+        "LABEL": item["label"],
+        "MORE_MARKUP": more_markup,
+    })
 
     if not item.get("children"):
         return f'                <li>{option_html}</li>'
@@ -52,11 +55,12 @@ def render_tree_option(item: dict) -> str:
 def render_tree_children(items: list[dict], submenu_id: str, submenu_label: str, expanded: bool) -> str:
     hidden_attr = "" if expanded else " hidden"
     rendered_items = "\n".join(render_tree_option(item) for item in items)
-    return (
-        f'                  <ul class="service-tree__children" id="{submenu_id}" aria-label="{submenu_label}"{hidden_attr}>\n'
-        f'{rendered_items}\n'
-        f'                  </ul>'
-    )
+    return render_partial("tree-children.html", {
+        "SUBMENU_ID": submenu_id,
+        "SUBMENU_LABEL": submenu_label,
+        "HIDDEN_ATTR": hidden_attr,
+        "ITEMS": rendered_items,
+    })
 
 
 def build_tree_menu(name: str | None, tree_menus: dict) -> str:
@@ -64,8 +68,7 @@ def build_tree_menu(name: str | None, tree_menus: dict) -> str:
         return ""
     menu = tree_menus[name]
     rendered_items = "\n".join(render_tree_option(item) for item in menu["items"])
-    return (
-        f'              <ul class="service-tree__group" aria-label="{menu["ariaLabel"]}">\n'
-        f'{rendered_items}\n'
-        f'              </ul>'
-    )
+    return render_partial("tree-group.html", {
+        "ARIA_LABEL": menu["ariaLabel"],
+        "ITEMS": rendered_items,
+    })

@@ -30,3 +30,10 @@ def read_partial(name: str) -> str:
     if not name:
         return ""
     return read_text(SOURCE / "partials" / name)
+
+
+def render_partial(name: str, context: dict) -> str:
+    partial = read_text(SOURCE / "partials" / name)
+    for key, value in context.items():
+        partial = partial.replace("{{" + key + "}}", value)
+    return partial.rstrip("\n")
