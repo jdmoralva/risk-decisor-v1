@@ -19,3 +19,15 @@ Generated module that renders nested object-tree options and submenus for workbe
 
 ### HeaderAddon
 Generated module that renders header variations such as stage bars and services action toolbars from data instead of bespoke partial markup.
+
+### CardGridPage
+Page-type module for screens composed of a hero section and an EntityCard grid.
+
+### ServiceListPage
+Page-type module for screens composed of a HeaderAddon toolbar and a service EntityCard grid.
+
+### WorkbenchPage
+Page-type module for screens composed of a workbench layout, such as the CreditCard object tree and design canvas.
+
+### PageSpec
+Structured module interface that selects one page-type module and provides only the data needed by that page type, with a small escape hatch for a custom section when required.

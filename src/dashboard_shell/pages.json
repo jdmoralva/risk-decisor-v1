@@ -6,13 +6,22 @@
     "styles": ["style.css"],
     "scripts": ["assets/js/controllers/card-selection-controller.js", "assets/js/pages/card-grid-page.js"],
     "activeNav": "integrations",
-    "entityCards": { "variant": "environment", "collection": "environments" },
-    "headerAddon": null,
     "breadcrumbs": [
       { "type": "home", "href": "index.html" },
       { "type": "current", "label": "Environments" }
     ],
-    "mainPartial": "environments.html"
+    "pageSpec": {
+      "type": "card-grid",
+      "hero": {
+        "ariaLabel": "Page title and actions",
+        "title": "ENVIRONMENTS",
+        "actionLabel": "Import Environment"
+      },
+      "cards": {
+        "ariaLabel": "Environment cards",
+        "entityCards": { "variant": "environment", "collection": "environments" }
+      }
+    }
   },
   {
     "output": "integrations.html",
@@ -21,13 +30,22 @@
     "styles": ["style.css"],
     "scripts": ["assets/js/controllers/card-selection-controller.js", "assets/js/pages/card-grid-page.js"],
     "activeNav": "integrations",
-    "entityCards": { "variant": "environment", "collection": "environments" },
-    "headerAddon": null,
     "breadcrumbs": [
       { "type": "home", "href": "integrations.html" },
       { "type": "current", "label": "Environments" }
     ],
-    "mainPartial": "environments.html"
+    "pageSpec": {
+      "type": "card-grid",
+      "hero": {
+        "ariaLabel": "Page title and actions",
+        "title": "ENVIRONMENTS",
+        "actionLabel": "Import Environment"
+      },
+      "cards": {
+        "ariaLabel": "Environment cards",
+        "entityCards": { "variant": "environment", "collection": "environments" }
+      }
+    }
   },
   {
     "output": "applications.html",
@@ -36,13 +54,22 @@
     "styles": ["style.css"],
     "scripts": ["assets/js/controllers/card-selection-controller.js", "assets/js/pages/card-grid-page.js"],
     "activeNav": "applications",
-    "entityCards": { "variant": "environment", "collection": "applications" },
-    "headerAddon": null,
     "breadcrumbs": [
       { "type": "home", "href": "applications.html" },
       { "type": "current", "label": "Applications" }
     ],
-    "mainPartial": "applications.html"
+    "pageSpec": {
+      "type": "card-grid",
+      "hero": {
+        "ariaLabel": "Page title and actions",
+        "title": "APPLICATIONS",
+        "actionLabel": "Create Application"
+      },
+      "cards": {
+        "ariaLabel": "Application cards",
+        "entityCards": { "variant": "environment", "collection": "applications" }
+      }
+    }
   },
   {
     "output": "alerts.html",
@@ -51,13 +78,22 @@
     "styles": ["style.css"],
     "scripts": ["assets/js/controllers/card-selection-controller.js", "assets/js/pages/card-grid-page.js"],
     "activeNav": "alerts",
-    "entityCards": { "variant": "environment", "collection": "alerts" },
-    "headerAddon": null,
     "breadcrumbs": [
       { "type": "home", "href": "alerts.html" },
       { "type": "current", "label": "Alerts" }
     ],
-    "mainPartial": "alerts.html"
+    "pageSpec": {
+      "type": "card-grid",
+      "hero": {
+        "ariaLabel": "Page title and actions",
+        "title": "ALERTS",
+        "actionLabel": "Create Alert"
+      },
+      "cards": {
+        "ariaLabel": "Alert cards",
+        "entityCards": { "variant": "environment", "collection": "alerts" }
+      }
+    }
   },
   {
     "output": "workspaces.html",
@@ -66,13 +102,22 @@
     "styles": ["style.css"],
     "scripts": ["assets/js/controllers/card-selection-controller.js", "assets/js/pages/card-grid-page.js"],
     "activeNav": "workspaces",
-    "entityCards": { "variant": "environment", "collection": "workspaces" },
-    "headerAddon": null,
     "breadcrumbs": [
       { "type": "home", "href": "workspaces.html" },
       { "type": "current", "label": "Workspaces" }
     ],
-    "mainPartial": "workspaces.html"
+    "pageSpec": {
+      "type": "card-grid",
+      "hero": {
+        "ariaLabel": "Page title and actions",
+        "title": "WORKSPACES",
+        "actionLabel": "New Workspace"
+      },
+      "cards": {
+        "ariaLabel": "Workspace cards",
+        "entityCards": { "variant": "environment", "collection": "workspaces" }
+      }
+    }
   },
   {
     "output": "services.html",
@@ -81,14 +126,19 @@
     "styles": ["style.css"],
     "scripts": [],
     "activeNav": "integrations",
-    "entityCards": { "variant": "service", "collection": "services" },
-    "headerAddon": "servicesToolbar",
     "breadcrumbs": [
       { "type": "home", "href": "integrations.html" },
       { "type": "link", "href": "integrations.html", "label": "Imported" },
       { "type": "current", "label": "Services" }
     ],
-    "mainPartial": "services.html"
+    "pageSpec": {
+      "type": "service-list",
+      "headerAddon": "servicesToolbar",
+      "cards": {
+        "ariaLabel": "Service cards",
+        "entityCards": { "variant": "service", "collection": "services" }
+      }
+    }
   },
   {
     "output": "creditcard-service.html",
@@ -97,15 +147,22 @@
     "styles": ["style.css"],
     "scripts": ["assets/js/controllers/tree-toggle-controller.js", "assets/js/pages/creditcard-service-page.js"],
     "activeNav": "integrations",
-    "entityCards": null,
-    "treeMenu": "creditcardObjects",
-    "headerAddon": "creditcardStagebar",
     "breadcrumbs": [
       { "type": "home", "href": "integrations.html" },
       { "type": "link", "href": "integrations.html", "label": "Imported" },
       { "type": "link", "href": "services.html", "label": "Services" },
       { "type": "current", "label": "CreditCard" }
     ],
-    "mainPartial": "creditcard-service.html"
+    "pageSpec": {
+      "type": "workbench",
+      "headerAddon": "creditcardStagebar",
+      "workbench": {
+        "ariaLabel": "CreditCard service workbench",
+        "treePanelAriaLabel": "Object tree",
+        "canvasAriaLabel": "Design canvas",
+        "treeMenu": "creditcardObjects",
+        "canvasHint": "There is currently no business logic open now. You can create a new business logic window or open one from the object tree."
+      }
+    }
   }
 ]
