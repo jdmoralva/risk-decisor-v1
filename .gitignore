@@ -8,3 +8,6 @@ example/
 # Build files
 __pycache__/
 *.pyc
+
+# Sessions
+notes.txt
