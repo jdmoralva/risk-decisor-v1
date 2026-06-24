@@ -78,6 +78,7 @@ python scripts/build_dashboard_shell.py
 - Each generated page keeps an inline runtime sprite so icons work correctly when opened via `file://`.
 - Card selection behavior lives in `assets/js/controllers/card-selection-controller.js` and is loaded by `assets/js/pages/card-grid-page.js`.
 - Tree toggle behavior lives in `assets/js/controllers/tree-toggle-controller.js` and is loaded by `assets/js/pages/creditcard-service-page.js`.
+- Generated pages use an inline module bootstrap adapter because external module scripts are blocked on `file://` in Chrome.
 
 ## Extend
 

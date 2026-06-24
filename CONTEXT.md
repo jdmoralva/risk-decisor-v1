@@ -31,3 +31,9 @@ Page-type module for screens composed of a workbench layout, such as the CreditC
 
 ### PageSpec
 Structured module interface that selects one page-type module and provides only the data needed by that page type, with a small escape hatch for a custom section when required.
+
+### PageBootstrap
+Runtime module that initializes the generated screen through a small bootstrap key interface instead of page-local global wiring.
+
+### PageBootstrapRegistry
+Runtime module that maps generated page bootstrap keys to page-owned adapters and initializes them through one ES module seam.

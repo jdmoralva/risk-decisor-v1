@@ -10,15 +10,15 @@ from scripts.dashboard_shell_build.context import load_build_context
 from scripts.dashboard_shell_build.header_addons import render_header_addon
 from scripts.dashboard_shell_build.output_writer import write_output
 from scripts.dashboard_shell_build.page_specs import build_page_spec
-from scripts.dashboard_shell_build.shell import build_breadcrumbs, build_scripts, build_sidebar, build_styles
+from scripts.dashboard_shell_build.shell import build_breadcrumbs, build_body_attrs, build_runtime_script, build_sidebar, build_styles
 
 
 def render_page(page: dict, build_context: dict) -> str:
     html = build_context["template"]
     html = html.replace("{{TITLE}}", page["title"])
-    html = html.replace("{{BODY_CLASS_ATTR}}", f' class="{page["bodyClass"]}"' if page["bodyClass"] else "")
+    html = html.replace("{{BODY_ATTRS}}", build_body_attrs(page["bodyClass"], page.get("bootstrapKey")))
     html = html.replace("{{STYLE_LINKS}}", build_styles(page["styles"]))
-    html = html.replace("{{SCRIPT_TAGS}}", build_scripts(page["scripts"]))
+    html = html.replace("{{RUNTIME_SCRIPT}}", build_runtime_script(page.get("bootstrapKey")))
     html = html.replace("{{ICON_SPRITE}}", build_context["icon_sprite"])
     html = html.replace("{{BREADCRUMBS}}", build_breadcrumbs(page["breadcrumbs"]))
     html = html.replace(

@@ -1,3 +1,8 @@
+from pathlib import Path
+
+
+ROOT = Path(__file__).resolve().parents[2]
+
 SIDEBAR_ITEMS = [
     {"key": "applications", "label": "Applications", "href": "applications.html", "icon": "icon-grid"},
     {"key": "integrations", "label": "Integrations", "href": "integrations.html", "icon": "icon-branch"},
@@ -10,8 +15,68 @@ def build_styles(styles: list[str]) -> str:
     return "\n".join(f'  <link rel="stylesheet" href="{href}">' for href in styles)
 
 
-def build_scripts(scripts: list[str]) -> str:
-    return "\n".join(f'  <script src="{src}"></script>' for src in scripts)
+def build_body_attrs(body_class: str, bootstrap_key: str | None) -> str:
+    attrs: list[str] = []
+    if body_class:
+        attrs.append(f'class="{body_class}"')
+    if bootstrap_key:
+        attrs.append(f'data-page-bootstrap="{bootstrap_key}"')
+    return f' {" ".join(attrs)}' if attrs else ""
+
+
+def build_runtime_script(bootstrap_key: str | None) -> str:
+    if not bootstrap_key:
+        return ""
+
+    bundles = {
+        "card-grid": {
+            "sources": [
+                "assets/js/controllers/card-selection-controller.js",
+                "assets/js/pages/card-grid-page.js",
+            ],
+            "bootstrap": "bootstrapCardGridPage",
+        },
+        "creditcard-service": {
+            "sources": [
+                "assets/js/controllers/tree-toggle-controller.js",
+                "assets/js/pages/creditcard-service-page.js",
+            ],
+            "bootstrap": "bootstrapCreditcardServicePage",
+        },
+    }
+
+    def inline_module_source(relative_path: str) -> str:
+        module_source = (ROOT / relative_path).read_text(encoding="utf-8")
+        lines = [line for line in module_source.splitlines() if not line.lstrip().startswith('import ')]
+        source = "\n".join(lines)
+        source = source.replace('export function ', 'function ')
+        source = source.replace('export const ', 'const ')
+        source = source.replace('export let ', 'let ')
+        source = source.replace('export class ', 'class ')
+        return source
+
+    bundle = bundles[bootstrap_key]
+    source_blocks = "\n\n".join(inline_module_source(path) for path in bundle["sources"])
+    registry = (
+        f"const pageBootstrapRegistry = {{ '{bootstrap_key}': {bundle['bootstrap']} }};\n"
+        "function readBootstrapKey(root) {\n"
+        "  return root.dataset.pageBootstrap || '';\n"
+        "}\n\n"
+        "function bootstrapPage(root) {\n"
+        "  const pageBootstrapKey = readBootstrapKey(root);\n"
+        "  if (!pageBootstrapKey) {\n"
+        "    return null;\n"
+        "  }\n\n"
+        "  const bootstrapAdapter = pageBootstrapRegistry[pageBootstrapKey];\n"
+        "  if (!bootstrapAdapter) {\n"
+        "    throw new Error(`Unknown PageBootstrapRegistry key: ${pageBootstrapKey}`);\n"
+        "  }\n\n"
+        "  return bootstrapAdapter({ root });\n"
+        "}\n\n"
+        "window.pageBootstrap = bootstrapPage(document.body);"
+    )
+
+    return f'  <script type="module">\n{source_blocks}\n\n{registry}\n  </script>'
 
 
 def build_breadcrumbs(items: list[dict]) -> str:
