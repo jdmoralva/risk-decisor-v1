@@ -4,3 +4,7 @@ example/
 # Specs conf
 .opencode/
 .specify/
+
+# Build files
+__pycache__/
+*.pyc
