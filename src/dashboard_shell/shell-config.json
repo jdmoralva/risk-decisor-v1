@@ -1,0 +1,8 @@
+{
+  "sidebarItems": [
+    { "key": "applications", "label": "Applications", "href": "applications.html", "icon": "icon-grid" },
+    { "key": "integrations", "label": "Integrations", "href": "integrations.html", "icon": "icon-branch" },
+    { "key": "alerts", "label": "Alerts", "href": "alerts.html", "icon": "icon-alert" },
+    { "key": "workspaces", "label": "Workspaces", "href": "workspaces.html", "icon": "icon-briefcase" }
+  ]
+}

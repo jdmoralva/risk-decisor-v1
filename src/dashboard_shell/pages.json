@@ -1,25 +1,25 @@
 [
   {
     "output": "index.html",
-    "title": "Provenir Environments Mockup",
+    "title": "Provenir Applications Mockup",
     "bodyClass": "",
     "styles": ["style.css"],
     "bootstrapKey": "card-grid",
-    "activeNav": "integrations",
+    "activeNav": "applications",
     "breadcrumbs": [
       { "type": "home", "href": "index.html" },
-      { "type": "current", "label": "Environments" }
+      { "type": "current", "label": "Applications" }
     ],
     "pageSpec": {
       "type": "card-grid",
       "hero": {
         "ariaLabel": "Page title and actions",
-        "title": "ENVIRONMENTS",
-        "actionLabel": "Import Environment"
+        "title": "APPLICATIONS",
+        "actionLabel": "Create Application"
       },
       "cards": {
-        "ariaLabel": "Environment cards",
-        "entityCards": { "variant": "environment", "collection": "environments" }
+        "ariaLabel": "Application cards",
+        "entityCards": { "variant": "environment", "collection": "applications" }
       }
     }
   },
@@ -160,6 +160,11 @@
         "ariaLabel": "CreditCard service workbench",
         "treePanelAriaLabel": "Object tree",
         "canvasAriaLabel": "Design canvas",
+        "searchRegionAriaLabel": "Search objects",
+        "searchInputAriaLabel": "Search",
+        "addObjectAriaLabel": "Add object",
+        "gridViewAriaLabel": "Grid view",
+        "branchViewAriaLabel": "Branch view",
         "treeMenu": "creditcardObjects",
         "canvasHint": "There is currently no business logic open now. You can create a new business logic window or open one from the object tree."
       }

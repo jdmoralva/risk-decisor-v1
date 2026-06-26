@@ -3,13 +3,6 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 
-SIDEBAR_ITEMS = [
-    {"key": "applications", "label": "Applications", "href": "applications.html", "icon": "icon-grid"},
-    {"key": "integrations", "label": "Integrations", "href": "integrations.html", "icon": "icon-branch"},
-    {"key": "alerts", "label": "Alerts", "href": "alerts.html", "icon": "icon-alert"},
-    {"key": "workspaces", "label": "Workspaces", "href": "workspaces.html", "icon": "icon-briefcase"},
-]
-
 
 def build_styles(styles: list[str]) -> str:
     return "\n".join(f'  <link rel="stylesheet" href="{href}">' for href in styles)
@@ -97,9 +90,9 @@ def build_breadcrumbs(items: list[dict]) -> str:
     return "\n".join(parts)
 
 
-def build_sidebar(active_key: str) -> str:
+def build_sidebar(active_key: str, items: list[dict]) -> str:
     rendered: list[str] = []
-    for index, item in enumerate(SIDEBAR_ITEMS):
+    for index, item in enumerate(items):
         active_class = " sidebar__action--active" if item["key"] == active_key else ""
         aria_current = ' aria-current="page"' if item["key"] == active_key else ""
         rendered.append(

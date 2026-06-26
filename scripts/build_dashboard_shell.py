@@ -25,7 +25,7 @@ def render_page(page: dict, build_context: dict) -> str:
         "{{HEADER_ROW_ADDON}}",
         render_header_addon(page["pageSpec"].get("headerAddon"), "breadcrumb", build_context["header_addons"]),
     )
-    html = html.replace("{{SIDEBAR_ITEMS}}", build_sidebar(page["activeNav"]))
+    html = html.replace("{{SIDEBAR_ITEMS}}", build_sidebar(page["activeNav"], build_context["shell_config"]["sidebarItems"]))
     html = html.replace(
         "{{MAIN_CONTENT}}",
         build_page_spec(

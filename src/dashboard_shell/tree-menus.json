@@ -4,24 +4,37 @@
     "items": [
       {
         "label": "Business Logic",
-        "icon": "icon-branch",
-        "kind": "top",
+        "icon": "icon-cube",
+        "kind": "submenu",
+        "more": false,
         "toggle": {
           "expanded": true,
           "controls": "business-logic-submenu",
           "label": "Business Logic submenu"
         },
-        "more": true,
         "children": [
-          { "label": "Chrome...", "kind": "submenu" },
-          { "label": "HealthCheck", "kind": "submenu" },
-          { "label": "Mpose", "kind": "submenu" },
-          { "label": "Processor", "kind": "submenu" },
-          { "label": "Bills", "kind": "submenu" },
-          { "label": "Scripts", "kind": "submenu" },
-          { "label": "Utility", "kind": "submenu" },
+          { "label": "Variables", "icon": "icon-cube", "kind": "submenu" },
+          { "label": "Models", "icon": "icon-cube", "kind": "submenu" },
+          { "label": "Decision Tables", "icon": "icon-grid", "kind": "submenu" },
+          { "label": "Approval Limits", "icon": "icon-grid", "kind": "submenu" },
+          { "label": "User Profiles", "icon": "icon-user", "kind": "submenu" },
+          { 
+            "label": "Scripts", 
+            "icon": "icon-flask", 
+            "kind": "submenu",
+            "toggle": {
+              "expanded": false,
+              "controls": "scripts-submenu",
+              "label": "Scripts submenu"
+            },
+            "children": [
+              { "label": "AdjustedIncome", "icon": "icon-flask", "kind": "submenu", "more": true },
+              { "label": "UpdateSegment", "icon": "icon-flask", "kind": "submenu", "more": true }
+            ]
+          },
           {
             "label": "Workflows",
+            "icon": "icon-branch",
             "kind": "submenu",
             "toggle": {
               "expanded": false,
@@ -29,18 +42,17 @@
               "label": "Workflows submenu"
             },
             "children": [
-              { "label": "Decision", "kind": "submenu" },
-              { "label": "MainDecision", "kind": "submenu" },
-              { "label": "UpdateDecision", "kind": "submenu" }
+              { "label": "Decision", "icon": "icon-branch", "kind": "submenu", "more": true },
+              { "label": "MainDecision", "icon": "icon-branch", "kind": "submenu", "more": true }
             ]
-          }
+          },
+          { "label": "Events", "icon": "icon-grid", "kind": "submenu" }
         ]
       },
       { "label": "Connections", "icon": "icon-branch" },
-      { "label": "Data Models", "icon": "icon-grid" },
-      { "label": "Document Templates", "icon": "icon-grid" },
-      { "label": "Events", "icon": "icon-alert" },
-      { "label": "Windows", "checked": true, "selected": true }
+      { "label": "Data Models", "icon": "icon-cube" },
+      { "label": "AI Copilot", "icon": "icon-briefcase" },
+      { "label": "Monitoring", "icon": "icon-alert" }
     ]
   }
 }

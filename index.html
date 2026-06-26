@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Provenir Environments Mockup</title>
+  <title>Provenir Applications Mockup</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/fonts/barlow.css">
   <link rel="stylesheet" href="style.css">
@@ -43,7 +43,7 @@
         <nav class="breadcrumbs" aria-label="Breadcrumb">
           <a href="index.html" class="breadcrumbs__link" aria-label="Home"><svg><use href="#icon-home"></use></svg></a>
           <svg class="breadcrumbs__divider"><use href="#icon-arrow-right"></use></svg>
-          <span class="breadcrumbs__current">Environments</span>
+          <span class="breadcrumbs__current">Applications</span>
         </nav>
 
       </div>
@@ -51,8 +51,8 @@
 
     <aside class="sidebar" aria-label="Primary navigation">
       <div class="sidebar__stack">
-        <a class="sidebar__action" href="applications.html" aria-label="Applications"><svg><use href="#icon-grid"></use></svg></a>
-        <a class="sidebar__action sidebar__action--active" href="integrations.html" aria-label="Integrations" aria-current="page"><svg><use href="#icon-branch"></use></svg></a>
+        <a class="sidebar__action sidebar__action--active" href="applications.html" aria-label="Applications" aria-current="page"><svg><use href="#icon-grid"></use></svg></a>
+        <a class="sidebar__action" href="integrations.html" aria-label="Integrations"><svg><use href="#icon-branch"></use></svg></a>
         <span class="sidebar__divider" aria-hidden="true"></span>
         <a class="sidebar__action" href="alerts.html" aria-label="Alerts"><svg><use href="#icon-alert"></use></svg></a>
         <a class="sidebar__action" href="workspaces.html" aria-label="Workspaces"><svg><use href="#icon-briefcase"></use></svg></a>
@@ -67,52 +67,51 @@
       <section class="content__hero" aria-label="Page title and actions">
         <div class="hero-ribbon">
           <span class="hero-ribbon__edge"></span>
-          <h1>ENVIRONMENTS</h1>
+          <h1>APPLICATIONS</h1>
           <span class="hero-ribbon__edge"></span>
         </div>
 
         <button class="import-button" type="button">
           <svg><use href="#icon-plus"></use></svg>
-          <span>Import Environment</span>
+          <span>Create Application</span>
         </button>
       </section>
 
-      <section class="cards-grid" aria-label="Environment cards">
-        <article class="environment-card environment-card--selected environment-card--navigable" tabindex="0" data-card>
-          <a class="environment-card__stretched-link" href="services.html" aria-label="Open Imported services"></a>
-          <button class="environment-card__menu" type="button" aria-label="Imported environment options"><svg><use href="#icon-ellipsis"></use></svg></button>
-          <div class="environment-card__badge" aria-hidden="true"><svg><use href="#icon-cube"></use></svg></div>
-          <h2>Imported</h2>
+      <section class="cards-grid" aria-label="Application cards">
+        <article class="environment-card environment-card--selected" tabindex="0" data-card>
+          <button class="environment-card__menu" type="button" aria-label="Origination app options"><svg><use href="#icon-ellipsis"></use></svg></button>
+          <div class="environment-card__badge" aria-hidden="true"><svg><use href="#icon-grid"></use></svg></div>
+          <h2>Origination</h2>
           <div class="environment-card__rule"></div>
-          <div class="environment-card__meta" aria-label="Imported environment details">
-            <button class="meta-icon" type="button" aria-label="Connections"><svg><use href="#icon-branch"></use></svg></button>
-            <button class="meta-icon" type="button" aria-label="Checklist"><svg><use href="#icon-grid"></use></svg></button>
+          <div class="environment-card__meta" aria-label="Origination application details">
+            <button class="meta-icon" type="button" aria-label="Modules"><svg><use href="#icon-grid"></use></svg></button>
+            <button class="meta-icon" type="button" aria-label="Links"><svg><use href="#icon-branch"></use></svg></button>
             <button class="meta-icon" type="button" aria-label="Warnings"><svg><use href="#icon-alert"></use></svg></button>
-            <button class="meta-icon" type="button" aria-label="Deployments"><svg><use href="#icon-briefcase"></use></svg></button>
+            <button class="meta-icon" type="button" aria-label="Workspaces"><svg><use href="#icon-briefcase"></use></svg></button>
           </div>
         </article>
         <article class="environment-card" tabindex="0" data-card>
-          <button class="environment-card__menu" type="button" aria-label="Sandbox environment options"><svg><use href="#icon-ellipsis"></use></svg></button>
-          <div class="environment-card__badge" aria-hidden="true"><svg><use href="#icon-cube"></use></svg></div>
-          <h2>SANDBOX</h2>
+          <button class="environment-card__menu" type="button" aria-label="Decisioning app options"><svg><use href="#icon-ellipsis"></use></svg></button>
+          <div class="environment-card__badge" aria-hidden="true"><svg><use href="#icon-grid"></use></svg></div>
+          <h2>Decisioning</h2>
           <div class="environment-card__rule"></div>
-          <div class="environment-card__meta" aria-label="Sandbox environment details">
-            <button class="meta-icon" type="button" aria-label="Connections"><svg><use href="#icon-branch"></use></svg></button>
-            <button class="meta-icon" type="button" aria-label="Checklist"><svg><use href="#icon-grid"></use></svg></button>
-            <button class="meta-icon" type="button" aria-label="Validation"><svg><use href="#icon-flask"></use></svg></button>
-            <button class="meta-icon" type="button" aria-label="Deployments"><svg><use href="#icon-briefcase"></use></svg></button>
+          <div class="environment-card__meta" aria-label="Decisioning application details">
+            <button class="meta-icon" type="button" aria-label="Modules"><svg><use href="#icon-grid"></use></svg></button>
+            <button class="meta-icon" type="button" aria-label="Links"><svg><use href="#icon-branch"></use></svg></button>
+            <button class="meta-icon" type="button" aria-label="Warnings"><svg><use href="#icon-alert"></use></svg></button>
+            <button class="meta-icon" type="button" aria-label="Workspaces"><svg><use href="#icon-briefcase"></use></svg></button>
           </div>
         </article>
         <article class="environment-card" tabindex="0" data-card>
-          <button class="environment-card__menu" type="button" aria-label="Production environment options"><svg><use href="#icon-ellipsis"></use></svg></button>
-          <div class="environment-card__badge" aria-hidden="true"><svg><use href="#icon-cube"></use></svg></div>
-          <h2>PRODUCTION</h2>
+          <button class="environment-card__menu" type="button" aria-label="Reporting app options"><svg><use href="#icon-ellipsis"></use></svg></button>
+          <div class="environment-card__badge" aria-hidden="true"><svg><use href="#icon-grid"></use></svg></div>
+          <h2>Reporting</h2>
           <div class="environment-card__rule"></div>
-          <div class="environment-card__meta" aria-label="Production environment details">
-            <button class="meta-icon" type="button" aria-label="Connections"><svg><use href="#icon-branch"></use></svg></button>
-            <button class="meta-icon" type="button" aria-label="Checklist"><svg><use href="#icon-grid"></use></svg></button>
-            <button class="meta-icon" type="button" aria-label="Security"><svg><use href="#icon-lock"></use></svg></button>
-            <button class="meta-icon" type="button" aria-label="Deployments"><svg><use href="#icon-briefcase"></use></svg></button>
+          <div class="environment-card__meta" aria-label="Reporting application details">
+            <button class="meta-icon" type="button" aria-label="Modules"><svg><use href="#icon-grid"></use></svg></button>
+            <button class="meta-icon" type="button" aria-label="Links"><svg><use href="#icon-branch"></use></svg></button>
+            <button class="meta-icon" type="button" aria-label="Warnings"><svg><use href="#icon-alert"></use></svg></button>
+            <button class="meta-icon" type="button" aria-label="Workspaces"><svg><use href="#icon-briefcase"></use></svg></button>
           </div>
         </article>
       </section>

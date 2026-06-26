@@ -67,10 +67,10 @@
       ]
     },
     {
-      "title": "Fraud",
-      "menuLabel": "Fraud app options",
+      "title": "Reporting",
+      "menuLabel": "Reporting app options",
       "badgeIcon": "icon-grid",
-      "metaAria": "Fraud application details",
+      "metaAria": "Reporting application details",
       "meta": [
         { "label": "Modules", "icon": "icon-grid" },
         { "label": "Links", "icon": "icon-branch" },
@@ -81,11 +81,11 @@
   ],
   "alerts": [
     {
-      "title": "Fraud Spike",
-      "menuLabel": "Fraud spike alert options",
+      "title": "Operational",
+      "menuLabel": "Operational alert options",
       "badgeIcon": "icon-alert",
       "selected": true,
-      "metaAria": "Fraud spike alert details",
+      "metaAria": "Operational alert details",
       "meta": [
         { "label": "Rules", "icon": "icon-grid" },
         { "label": "Escalations", "icon": "icon-branch" },
@@ -94,10 +94,10 @@
       ]
     },
     {
-      "title": "Latency",
-      "menuLabel": "Latency threshold alert options",
+      "title": "Security breach",
+      "menuLabel": "Security breach alert options",
       "badgeIcon": "icon-alert",
-      "metaAria": "Latency alert details",
+      "metaAria": "Security breach alert details",
       "meta": [
         { "label": "Rules", "icon": "icon-grid" },
         { "label": "Escalations", "icon": "icon-branch" },
@@ -106,10 +106,10 @@
       ]
     },
     {
-      "title": "KYC Watch",
-      "menuLabel": "KYC watch alert options",
+      "title": "Data quality",
+      "menuLabel": "Data quality alert options",
       "badgeIcon": "icon-alert",
-      "metaAria": "KYC watch alert details",
+      "metaAria": "Data quality alert details",
       "meta": [
         { "label": "Rules", "icon": "icon-grid" },
         { "label": "Escalations", "icon": "icon-branch" },
@@ -120,11 +120,11 @@
   ],
   "workspaces": [
     {
-      "title": "North America",
-      "menuLabel": "North America workspace options",
+      "title": "Rule Monitoring",
+      "menuLabel": "Rule Monitoring workspace options",
       "badgeIcon": "icon-briefcase",
       "selected": true,
-      "metaAria": "North America workspace details",
+      "metaAria": "Rule Monitoring workspace details",
       "meta": [
         { "label": "Applications", "icon": "icon-grid" },
         { "label": "Links", "icon": "icon-branch" },
@@ -133,10 +133,10 @@
       ]
     },
     {
-      "title": "LATAM",
-      "menuLabel": "LATAM workspace options",
+      "title": "Experiments",
+      "menuLabel": "Experiments workspace options",
       "badgeIcon": "icon-briefcase",
-      "metaAria": "LATAM workspace details",
+      "metaAria": "Experiments workspace details",
       "meta": [
         { "label": "Applications", "icon": "icon-grid" },
         { "label": "Links", "icon": "icon-branch" },
@@ -145,10 +145,10 @@
       ]
     },
     {
-      "title": "EMEA",
-      "menuLabel": "EMEA workspace options",
+      "title": "Audit",
+      "menuLabel": "Audit workspace options",
       "badgeIcon": "icon-briefcase",
-      "metaAria": "EMEA workspace details",
+      "metaAria": "Audit workspace details",
       "meta": [
         { "label": "Applications", "icon": "icon-grid" },
         { "label": "Links", "icon": "icon-branch" },
@@ -158,15 +158,8 @@
     }
   ],
   "services": [
-    { "title": "BureauTestHarness", "deleteLabel": "Delete BureauTestHarness", "moreLabel": "More BureauTestHarness options" },
-    { "title": "CreditCard", "deleteLabel": "Delete CreditCard", "moreLabel": "More CreditCard options", "href": "creditcard-service.html", "linkLabel": "Open CreditCard service" },
-    { "title": "DataModel", "deleteLabel": "Delete DataModel", "moreLabel": "More DataModel options" },
-    { "title": "Decisionintelligence", "deleteLabel": "Delete Decisionintelligence", "moreLabel": "More Decisionintelligence options" },
-    { "title": "LoanOriginationDate", "deleteLabel": "Delete LoanOriginationDate", "moreLabel": "More LoanOriginationDate options" },
-    { "title": "Models", "deleteLabel": "Delete Models", "moreLabel": "More Models options" },
-    { "title": "serv12", "deleteLabel": "Delete serv12", "moreLabel": "More serv12 options" },
-    { "title": "TestDEConfig", "deleteLabel": "Delete TestDEConfig", "moreLabel": "More TestDEConfig options" },
-    { "title": "testreles", "deleteLabel": "Delete testreles", "moreLabel": "More testreles options" },
-    { "title": "testserv29novDE", "deleteLabel": "Delete testserv29novDE", "moreLabel": "More testserv29novDE options" }
+    { "title": "Mortgage", "deleteLabel": "Delete Mortgage", "moreLabel": "More Mortgage options" },
+    { "title": "PersonalLoan", "deleteLabel": "Delete PersonalLoan", "moreLabel": "More PersonalLoan options" },
+    { "title": "CreditCard", "deleteLabel": "Delete CreditCard", "moreLabel": "More CreditCard options", "href": "creditcard-service.html", "linkLabel": "Open CreditCard service" }
   ]
 }

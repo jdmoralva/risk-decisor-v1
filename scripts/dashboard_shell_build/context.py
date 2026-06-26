@@ -19,6 +19,7 @@ def load_build_context() -> dict:
         "root": ROOT,
         "template": read_text(SOURCE / "template.html"),
         "icon_sprite": read_text(SOURCE / "icon-sprite.html"),
+        "shell_config": read_json(SOURCE / "shell-config.json"),
         "pages": read_json(SOURCE / "pages.json"),
         "entity_cards": read_json(SOURCE / "entity-cards.json"),
         "tree_menus": read_json(SOURCE / "tree-menus.json"),
