@@ -35,18 +35,19 @@ def render_service_entity_card(item: dict) -> str:
     if item.get("href"):
         classes.append("service-card--navigable")
 
+    title = item["title"]
     stretched_link = ""
     if item.get("href"):
         stretched_link = (
-            f'\n          <a class="service-card__stretched-link" href="{item["href"]}" aria-label="{item["linkLabel"]}"></a>'
+            f'\n          <a class="service-card__stretched-link" href="{item["href"]}" aria-label="{item.get("linkLabel", f"Open {title} service")}"></a>'
         )
 
     return render_partial("service-card.html", {
         "CLASSES": " ".join(classes),
         "STRETCHED_LINK": stretched_link,
-        "DELETE_LABEL": item["deleteLabel"],
-        "MORE_LABEL": item["moreLabel"],
-        "TITLE": item["title"],
+        "DELETE_LABEL": item.get("deleteLabel", f"Delete {title}"),
+        "MORE_LABEL": item.get("moreLabel", f"More {title} options"),
+        "TITLE": title,
     })
 
 

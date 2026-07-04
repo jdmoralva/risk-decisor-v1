@@ -1,4 +1,5 @@
 import json
+import os
 from pathlib import Path
 
 
@@ -14,6 +15,17 @@ def read_json(path: Path):
     return json.loads(read_text(path))
 
 
+def resolve_entity_cards_path() -> Path:
+    override = os.environ.get("DASHBOARD_SHELL_ENTITY_CARDS_FILE", "").strip()
+    if not override:
+        return SOURCE / "entity-cards.json"
+
+    override_path = Path(override)
+    if not override_path.is_absolute():
+        override_path = ROOT / override_path
+    return override_path
+
+
 def load_build_context() -> dict:
     return {
         "root": ROOT,
@@ -21,7 +33,7 @@ def load_build_context() -> dict:
         "icon_sprite": read_text(SOURCE / "icon-sprite.html"),
         "shell_config": read_json(SOURCE / "shell-config.json"),
         "pages": read_json(SOURCE / "pages.json"),
-        "entity_cards": read_json(SOURCE / "entity-cards.json"),
+        "entity_cards": read_json(resolve_entity_cards_path()),
         "tree_menus": read_json(SOURCE / "tree-menus.json"),
         "header_addons": read_json(SOURCE / "header-addons.json"),
     }

@@ -8,6 +8,19 @@ example/
 # Build files
 __pycache__/
 *.pyc
+.venv/
+venv/
+dist/
+build/
+*.egg-info/
 
 # Sessions
 notes.txt
+
+# Editor and OS files
+.DS_Store
+Thumbs.db
+*.tmp
+*.swp
+.vscode/
+.idea/

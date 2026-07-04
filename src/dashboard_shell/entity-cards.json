@@ -158,8 +158,22 @@
     }
   ],
   "services": [
-    { "title": "Mortgage", "deleteLabel": "Delete Mortgage", "moreLabel": "More Mortgage options" },
-    { "title": "PersonalLoan", "deleteLabel": "Delete PersonalLoan", "moreLabel": "More PersonalLoan options" },
-    { "title": "CreditCard", "deleteLabel": "Delete CreditCard", "moreLabel": "More CreditCard options", "href": "creditcard-service.html", "linkLabel": "Open CreditCard service" }
+    {
+      "title": "Mortgage",
+      "deleteLabel": "Delete Mortgage",
+      "moreLabel": "More Mortgage options"
+    },
+    {
+      "title": "PersonalLoan",
+      "deleteLabel": "Delete PersonalLoan",
+      "moreLabel": "More PersonalLoan options"
+    },
+    {
+      "title": "CreditCard",
+      "deleteLabel": "Delete CreditCard",
+      "moreLabel": "More CreditCard options",
+      "href": "creditcard-service.html",
+      "linkLabel": "Open CreditCard service"
+    }
   ]
 }

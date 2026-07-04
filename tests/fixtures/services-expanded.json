@@ -1,0 +1,96 @@
+{
+  "environments": [
+    {
+      "title": "Imported",
+      "menuLabel": "Imported environment options",
+      "badgeIcon": "icon-cube",
+      "selected": true,
+      "href": "services.html",
+      "linkLabel": "Open Imported services",
+      "metaAria": "Imported environment details",
+      "meta": [
+        { "label": "Connections", "icon": "icon-branch" },
+        { "label": "Checklist", "icon": "icon-grid" },
+        { "label": "Warnings", "icon": "icon-alert" },
+        { "label": "Deployments", "icon": "icon-briefcase" }
+      ]
+    },
+    {
+      "title": "SANDBOX",
+      "menuLabel": "Sandbox environment options",
+      "badgeIcon": "icon-cube",
+      "metaAria": "Sandbox environment details",
+      "meta": [
+        { "label": "Connections", "icon": "icon-branch" },
+        { "label": "Checklist", "icon": "icon-grid" },
+        { "label": "Validation", "icon": "icon-flask" },
+        { "label": "Deployments", "icon": "icon-briefcase" }
+      ]
+    },
+    {
+      "title": "PRODUCTION",
+      "menuLabel": "Production environment options",
+      "badgeIcon": "icon-cube",
+      "metaAria": "Production environment details",
+      "meta": [
+        { "label": "Connections", "icon": "icon-branch" },
+        { "label": "Checklist", "icon": "icon-grid" },
+        { "label": "Security", "icon": "icon-lock" },
+        { "label": "Deployments", "icon": "icon-briefcase" }
+      ]
+    }
+  ],
+  "applications": [
+    {
+      "title": "Origination",
+      "menuLabel": "Origination app options",
+      "badgeIcon": "icon-grid",
+      "selected": true,
+      "metaAria": "Origination application details",
+      "meta": [
+        { "label": "Modules", "icon": "icon-grid" },
+        { "label": "Links", "icon": "icon-branch" },
+        { "label": "Warnings", "icon": "icon-alert" },
+        { "label": "Workspaces", "icon": "icon-briefcase" }
+      ]
+    }
+  ],
+  "alerts": [
+    {
+      "title": "Operational",
+      "menuLabel": "Operational alert options",
+      "badgeIcon": "icon-alert",
+      "selected": true,
+      "metaAria": "Operational alert details",
+      "meta": [
+        { "label": "Rules", "icon": "icon-grid" },
+        { "label": "Escalations", "icon": "icon-branch" },
+        { "label": "Severity", "icon": "icon-alert" },
+        { "label": "Owners", "icon": "icon-briefcase" }
+      ]
+    }
+  ],
+  "workspaces": [
+    {
+      "title": "Rule Monitoring",
+      "menuLabel": "Rule Monitoring workspace options",
+      "badgeIcon": "icon-briefcase",
+      "selected": true,
+      "metaAria": "Rule Monitoring workspace details",
+      "meta": [
+        { "label": "Applications", "icon": "icon-grid" },
+        { "label": "Links", "icon": "icon-branch" },
+        { "label": "Alerts", "icon": "icon-alert" },
+        { "label": "Workspaces", "icon": "icon-briefcase" }
+      ]
+    }
+  ],
+  "services": [
+    { "title": "Mortgage", "deleteLabel": "Delete Mortgage", "moreLabel": "More Mortgage options" },
+    { "title": "PersonalLoan", "deleteLabel": "Delete PersonalLoan", "moreLabel": "More PersonalLoan options" },
+    { "title": "CreditCard", "deleteLabel": "Delete CreditCard", "moreLabel": "More CreditCard options", "href": "creditcard-service.html", "linkLabel": "Open CreditCard service" },
+    { "title": "EmbeddedPayments", "deleteLabel": "Delete EmbeddedPayments", "moreLabel": "More EmbeddedPayments options" },
+    { "title": "CrossBorderDisbursements", "deleteLabel": "Delete CrossBorderDisbursements", "moreLabel": "More CrossBorderDisbursements options" },
+    { "title": "Identity Resolution and Verification Suite", "deleteLabel": "Delete Identity Resolution and Verification Suite", "moreLabel": "More Identity Resolution and Verification Suite options" }
+  ]
+}

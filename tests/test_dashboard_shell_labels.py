@@ -1,9 +1,37 @@
+import os
 import unittest
+from pathlib import Path
+from unittest.mock import patch
 
 from scripts.build_dashboard_shell import render_page
+from scripts.dashboard_shell_build.context import load_build_context
 
 
 class DashboardShellLabelTests(unittest.TestCase):
+    def test_load_build_context_uses_entity_cards_override_file(self):
+        fixture_path = Path(__file__).parent / "fixtures" / "services-expanded.json"
+
+        with patch.dict(os.environ, {"DASHBOARD_SHELL_ENTITY_CARDS_FILE": str(fixture_path)}):
+            build_context = load_build_context()
+
+        self.assertEqual(6, len(build_context["entity_cards"]["services"]))
+        self.assertEqual(
+            "Identity Resolution and Verification Suite",
+            build_context["entity_cards"]["services"][-1]["title"],
+        )
+
+    def test_render_page_renders_services_from_override_dataset(self):
+        fixture_path = Path(__file__).parent / "fixtures" / "services-expanded.json"
+
+        with patch.dict(os.environ, {"DASHBOARD_SHELL_ENTITY_CARDS_FILE": str(fixture_path)}):
+            build_context = load_build_context()
+
+        page = next(page for page in build_context["pages"] if page["output"] == "services.html")
+        html = render_page(page, build_context)
+
+        self.assertIn("Identity Resolution and Verification Suite", html)
+        self.assertIn('aria-label="Open CreditCard service"', html)
+
     def test_render_page_uses_configured_sidebar_labels(self):
         page = {
             "title": "Test Page",
